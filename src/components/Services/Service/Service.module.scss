@@ -1,0 +1,49 @@
+
+  .service__card {
+    background-color: #f2f2f2;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 10px 10px 61px -20px rgba(0, 0, 0, 0.75);
+    transition: transform 0.2s ease-out;
+    margin: 3rem 0;
+
+    &:hover {
+      transform: translateY(-5px);
+      animation: shadowDance 10s infinite;
+    }
+
+    .__title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .__description {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #555;
+    }
+  }
+
+
+@keyframes shadowDance {
+  0% {
+    box-shadow: 10px 10px 61px -20px rgba(0, 0, 0, 0.75);
+  }
+
+  20% {
+    box-shadow: 10px 10px 61px -40px rgba(3, 185, 170, 0.75);
+  }
+
+  40% {
+    box-shadow: 10px 10px 61px -20px rgba(0, 0, 0, 0.75);
+  }
+
+  60% {
+    box-shadow: 10px 10px 61px -40px rgba(0, 0, 0, 0.75);
+  }
+
+  100% {
+    box-shadow: 10px 10px 61px -20px rgba(0, 0, 0, 0.75);
+  }
+
+}

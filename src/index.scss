@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fbfbfb!important;
+}
+
+$light-theme-color: #fff;
+$dark-theme-color: #333;
+
+
+.light-theme {
+  background-color: $light-theme-color;
+  color: #333;
+}
+
+.dark-theme {
+  background-color: $dark-theme-color;
+  color: #fff;
+}
