@@ -24,25 +24,26 @@ export const HeroTitle = () => {
 
   const shadowX = x - 4;
   const shadowY = y - 4;
-     
-return(
-       
-<>
 
-<div className={styles.root}>
+  return (
 
-  <div className="heroText">
-  <h1 style={{
-        textShadow: `${shadowX}px ${shadowY}px 3px rgba(0,0,0,0.3)`,
-      }}>Nodcraft</h1>
-<h2>
-IT, Design, Web - Beyond Your Expectations</h2>
-<p>Our team of experts is dedicated to delivering custom solutions that are tailored to your business needs. From stunning visuals to top-notch software, we'll bring your vision to life and help you stand out from the competition. Let us exceed your expectations and take your business to new heights. Contact us today to learn more.</p>
+    <>
 
-  </div>
-  <LottieHomeTitle />
-  </div>
+      <div className={styles.root}>
 
-</>
-    )
+        <div className="heroText">
+          <h1 style={{
+            textShadow: `${shadowX}px ${shadowY}px 3px rgba(0,0,0,0.3)`,
+          }}>Nodcraft</h1>
+            <LottieHomeTitle />
+          <h2>
+            IT, Design, Web - Beyond Your Expectations</h2>
+          <p>Our team of experts is dedicated to delivering custom solutions that are tailored to your business needs. From stunning visuals to top-notch software, we'll bring your vision to life and help you stand out from the competition. Let us exceed your expectations and take your business to new heights.</p>
+
+        </div>
+
+      </div>
+
+    </>
+  )
 };

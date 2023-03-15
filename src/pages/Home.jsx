@@ -1,5 +1,4 @@
 import React from 'react';
-import Container from "@mui/material/Container";
 import { AnimatedBg } from '../components/Homepage/AnimatedBg';
 import { Hero } from '../components/Homepage/Hero'
 import { HeroTitle } from '../components/Homepage/HeroTitle'
@@ -14,10 +13,8 @@ export const Home = () => {
       <AnimatedBg />
       <Hero />
       <Services />
-      <Container maxWidth="lg">
         <HeroTitle />
         <Postgrid />
-      </Container>
     </>
   );
 };

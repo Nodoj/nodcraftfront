@@ -1,13 +1,19 @@
+@import '../../index.scss';
+
 .root {
-  background-color: #000000cf;
-  position: absolute;
+  background-color: #050505;
+  position: sticky;
   z-index: 100;
   width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
 }
 
 .inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   svg {
     max-width: 80px;
@@ -15,19 +21,8 @@
   }
 }
 
-.logo {
-  color: rgb(255, 255, 255);
-  font-weight: 700;
-  font-size: 26px;
-  text-transform: uppercase;
-  letter-spacing: 0.15px;
-  border-radius: 5px;
-  padding: 0 10px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
- 
+.logo img{
+  max-width: 15em;
 }
 
 .buttons {

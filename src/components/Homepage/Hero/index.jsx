@@ -1,52 +1,55 @@
 import React, { useRef, useEffect, useState } from "react";
 import styles from "./Hero.module.scss";
 
+
 export const Hero = () => {
-  const canvasRef = useRef(null);
-  const [speed, setSpeed] = useState(120);
-  const [color, setColor] = useState("#fff");
+    const canvasRef = useRef(null);
+    const [speed, setSpeed] = useState(100);
+    const [circleSize, setCircleSize] = useState(23);
+    const [color, setColor] = useState("#7F00FF");
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-
-    const symbols = ["•", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "];
-    const columns = Math.floor(canvas.width / 10);
-    let drops = new Array(columns).fill(0).map(() => ({
-      y: Math.random() * canvas.height,
-      size: Math.random() * (25 - 10) + 10 // random size between 10 and 30
-    }));
-
-    function draw() {
-      ctx.fillStyle = "rgba(37, 6, 68, 0.05)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
+  
+    useEffect(() => {
+      const canvas = canvasRef.current;
+      const ctx = canvas.getContext("2d");
+  
+      const symbols = ["•", " "]; 
+      const fontSize = circleSize;
+      const columns = canvas.width / fontSize;
+      let drops = [];
+  
       for (let i = 0; i < columns; i++) {
-        const drop = drops[i];
-        const fontSize = drop.size;
+        drops[i] = 1;
+      }
+  
+      function draw() {
+        ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+  
         ctx.fillStyle = color;
         ctx.font = `${fontSize}px arial`;
-
-        const text = symbols[Math.floor(Math.random() * symbols.length)];
-        ctx.fillText(text, i * 10, drop.y);
-
-        if (drop.y > canvas.height && Math.random() > 0.975) {
-          drop.y = 0;
-          drop.size = Math.random() * (30 - 10) + 10; // random size between 10 and 30
+  
+        for (let i = 0; i < drops.length; i++) {
+          const text = symbols[Math.floor(Math.random() * symbols.length)];
+          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+  
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0;
+          }
+  
+          drops[i]++;
         }
-
-        drop.y += fontSize;
       }
-    }
-
-    const intervalId = setInterval(draw, speed);
-
-    return () => clearInterval(intervalId);
-  }, [speed, color]);
-
-  return (
-    <div className={styles.hero}>
-      <canvas ref={canvasRef} width={window.innerWidth * 1.3} height={window.innerHeight} />
-    </div>
-  );
-};
+  
+      setInterval(draw, speed);
+    }, [speed, circleSize, color]);
+  
+    
+    return (
+        <>
+      <div className={styles.hero}>
+        <canvas ref={canvasRef} width={window.innerWidth*1.3} height={window.innerHeight} />
+      </div>
+         </>
+    );
+  };
