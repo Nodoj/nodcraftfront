@@ -36,8 +36,8 @@ export const HeroTitle = () => {
             textShadow: `${shadowX}px ${shadowY}px 3px rgba(0,0,0,0.3)`,
           }}>Nodcraft</h1>
             <LottieHomeTitle />
-          <h2>
-            IT, Design, Web - Beyond Your Expectations</h2>
+          <h2>⋱ IT ⋰ Design ⋱ Web ⋰</h2> 
+          <h3>⋱ Beyond Your Expectations ⋰</h3>
           <p>Our team of experts is dedicated to delivering custom solutions that are tailored to your business needs. From stunning visuals to top-notch software, we'll bring your vision to life and help you stand out from the competition. Let us exceed your expectations and take your business to new heights.</p>
 
         </div>

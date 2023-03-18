@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Services.module.scss';
 import serviceGD from '../../assets/images/serviceGD.png'
 import serviceIT from '../../assets/images/serviceIT.png'
+import serviceDev from '../../assets/images/serviceDev.png'
 
 
 export const Services = () => {
@@ -23,14 +24,14 @@ export const Services = () => {
               </p>
             </div>
             <div className={styles.service__card}>
-              <img src={serviceIT} alt="serviceIT" />
+              <img src={serviceDev} alt="serviceDev" />
               <h2 className={styles.service__card__title}>Web Development</h2>
               <p className={styles.service__card__description}>
                 Our web development services include website design and development, e-commerce development, and website maintenance and support.
               </p>
             </div>
             <div className={styles.service__card}>
-              <img src={serviceGD} alt="serviceGD" />
+              <img src={serviceIT} alt="serviceIT" />
               <h2 className={styles.service__card__title}>IT Services</h2>
               <p className={styles.service__card__description}>
                 Our web development services include website design and development, e-commerce development, and website maintenance and support.
