@@ -32,7 +32,14 @@ dispatch(fetchProjects());
 return (
 <>
 <div className={styles.root}>
-      <Grid container spacing={20}>
+      <div className={styles.gridWrapper}>
+      <div className={styles.title__wrapper}>
+    <h1 className={styles.sweet__title}>
+      <span data-text="Projects">Projects</span>
+    </h1>
+    </div>
+      
+      <Grid container spacing={0}>
         <Grid xs={20} item>
           <Grid container spacing={2} direction="row" justify="space-between" alignItems="flex-start">
             {(isPostsLoading ? [...Array(5)] : posts.items).map((obj, index) => isPostsLoading ? (
@@ -45,10 +52,10 @@ return (
                   id={obj._id}
                   title={obj.title}
                   imageUrl={obj.imageUrl ? `${process.env.REACT_APP_API_URL}${obj.imageUrl}` : ''}
-                  user={obj.user}
-                  createdAt={obj.createdAt}
-                  viewsCount={obj.viewsCount}
-                  commentsCount={3}
+                  // user={obj.user}
+                  // createdAt={obj.createdAt}
+                  // viewsCount={obj.viewsCount}
+                  // commentsCount={3}
                   tags={obj.tags}
                   isEditable={userData?._id === obj.user._id}
                 />
@@ -57,6 +64,7 @@ return (
           </Grid>
         </Grid>
       </Grid>
+      </div>
 </div>
     </>
   );

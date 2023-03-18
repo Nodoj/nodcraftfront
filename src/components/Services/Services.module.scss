@@ -1,9 +1,11 @@
-$main-text-color: #7F00FF;
+@import '../../index.scss';
+
+
 
 .root {
 
   .servicesWrapper{
-    max-width: 1200px;
+    max-width: $container;
     margin: 24px auto;
     /* From https://css.glass */
     background: rgba(157, 157, 157, 0.2);
@@ -16,10 +18,11 @@ $main-text-color: #7F00FF;
   }
 
   .__title {
-    color: $main-text-color;
+    color: $main-color;
     font-size: 2rem;
     margin-bottom: 3rem;
   }
+
 
   .__grid {
     display: grid;
@@ -30,8 +33,36 @@ $main-text-color: #7F00FF;
       grid-template-columns: 1fr;
     }
   }
+  .service__card img{
+    max-width: 300px;
+  }
+  .service__card ul{
+    text-align: left;
+  }
+  .service__card ul li{
+    list-style: none;
+    padding: 10px;
+    border: 1px solid $main-color;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+    background-position-y: 0%;
+    transition: 0.5s all ease-in-out;
+    &:hover{
+      transform: translateX(-2px);
+      background-size: 100%;
+      background-color: $main-color;
+      transition: 0.5s all ease-in-out;
+      color: white;
+    }
+   
+  }
+  .service__card ul li span{
+    font-size: 1.1em;
+    color: $main-color;
+  }
+  
 }
 
-.service__card img{
-  max-width: 300px;
-}
+
+
