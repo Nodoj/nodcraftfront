@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Services.module.scss';
-import serviceGD from '../../assets/images/serviceGD.png'
-import serviceIT from '../../assets/images/serviceIT.png'
-import serviceDev from '../../assets/images/serviceDev.png'
+import serviceGD from '../../../assets/images/serviceGD.png'
+import serviceIT from '../../../assets/images/serviceIT.png'
+import serviceDev from '../../../assets/images/serviceDev.png'
 
 
 export const Services = () => {

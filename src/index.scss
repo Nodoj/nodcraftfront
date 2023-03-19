@@ -6,10 +6,17 @@ body {
   background-color: #fbfbfb!important;
 }
 
+
+@mixin wrap__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 $main-color: #7F00FF;
 $main-text-color: #fff;
 $ascent-text-color: #161616;
 $container: 1200px;
+
 
 
 $light-theme-color: #fff;

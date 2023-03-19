@@ -9,6 +9,6 @@ export * from "./Homepage/AnimatedBg"
 export * from "./Homepage/Hero"
 export * from "./Homepage/HeroTitle"
 export * from "./Homepage/Postgrid"
-export * from "./Services"
+export * from "./Homepage/Services"
 
 

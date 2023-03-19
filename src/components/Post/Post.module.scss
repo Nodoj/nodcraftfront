@@ -1,6 +1,8 @@
+@import '../../index.scss';
 $blue: #4361ee;
 
 .root {
+  @include wrap__container;
   background-color: #fff;
   animation: animatedgradient 10s infinite;
   border-radius: 6px;

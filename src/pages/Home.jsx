@@ -3,7 +3,7 @@ import { AnimatedBg } from '../components/Homepage/AnimatedBg';
 import { Hero } from '../components/Homepage/Hero'
 import { HeroTitle } from '../components/Homepage/HeroTitle'
 import { Postgrid } from '../components/Homepage/Postgrid'
-import { Services } from '../components/Services'
+import { Services } from '../components/Homepage/Services'
 
 
 export const Home = () => {

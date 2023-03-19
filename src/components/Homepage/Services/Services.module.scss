@@ -1,4 +1,4 @@
-@import '../../index.scss';
+@import '../../../index.scss';
 
 
 
@@ -49,17 +49,23 @@
     background-position-y: 0%;
     transition: 0.5s all ease-in-out;
     &:hover{
-      transform: translateX(-2px);
+      transform: translateX(-5px);
       background-size: 100%;
       background-color: $main-color;
       transition: 0.5s all ease-in-out;
       color: white;
+      &:hover span{
+        color: white;
+        font-size: 1.1em;
+        transition: 0.5s all ease-in-out;
+      }
     }
    
   }
   .service__card ul li span{
     font-size: 1.1em;
     color: $main-color;
+    transition: 0.5s all ease-in-out;
   }
   
 }
