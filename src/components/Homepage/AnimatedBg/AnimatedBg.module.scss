@@ -1,14 +1,25 @@
-$bubbleC1: #06c6a9;
-$bubbleC2: #d200e6;
-$bubbleC3: #111111;
+@import '../../../index.scss';
+
 $random-scale: random() * 0.4 + 95; // Random scale between 0.8 and 1.2
-$random-size: random() * 95 + 5; // Random scale between 5 and 100
+
 
 /* ------------ anim bg ----------------- */
 
 @keyframes move {
   100% {
     transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+@keyframes scaleCircle {
+  0%{
+    transform: scale(50);
+  }
+  50%{
+    transform: scale(10);
+  }
+  100%{
+    transform: scale(50);
   }
 }
 
@@ -27,244 +38,127 @@ $random-size: random() * 95 + 5; // Random scale between 5 and 100
     border-radius: 12vmin * $random-scale;
     backface-visibility: hidden;
     position: absolute;
-    animation: move;
+    animation: move ;
     animation-duration: 41s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    opacity: 0.7;
 
     &:nth-child(1) {
-      background-size: cover;
-      background-image: url(../../../assets/icons/angularp.png);
-      color: $bubbleC1;
-      top: 24%;
-      left: 70%;
+      background: radial-gradient(circle at 50% 50%, #ffffff, #ffffff, #757575, #ffffff);
+      top: 12%;
+      left: 12%;
+      animation: scaleCircle infinite;
       animation-duration: 67s;
       animation-delay: -52s;
-      transform-origin: -15vw 14vh;
-      box-shadow: -1vmin 0 3.5735456200185736vmin currentColor;
+      //transform-origin: -15vw 14vh;
+      box-shadow: -1vmin 0 1.5735456200185736vmin rgb(119, 119, 119);
     }
     &:nth-child(2) {
-      background-size: cover;
-      background-image: url(../../../assets/icons/awsp.png);
-      color: $bubbleC2;
-      top: 6%;
-      left: 96%;
-      animation-duration: 87s;
-      animation-delay: -23s;
+      background: radial-gradient(circle at 50% 50%, #ffffff, #ffffff, #757575, #ffffff);
+      top: 15%;
+      right: 4%;
+      width: 5em;
+      height: 5em;
+      animation-duration: 62s;
+      animation-delay: -52s;
       transform-origin: 3vw 2vh;
-      box-shadow: -1vmin 0 3.823172077493054vmin currentColor;
+      box-shadow: -1vmin 0 1.5735456200185736vmin rgb(119, 119, 119);
+      //box-shadow: -1vmin 0 3.823172077493054vmin currentColor;
     }
     &:nth-child(3) {
-      background-size: cover;
-      background-image: url(../../../assets/icons/canvap.png);
+      background: radial-gradient(circle at 50% 50%, #ffffff, #ffffff, #757575, #ffffff);
       color: $bubbleC3;
       top: 2%;
-      left: 68%;
-      animation-duration: 84s;
+      left: 23%;
+      width: 3em;
+      height: 3em;
+      animation-duration: 54s;
       animation-delay: -6s;
       transform-origin: 2vw 3vh;
-      box-shadow: -1vmin 0 3.8162095334108592vmin currentColor;
+      box-shadow: -1vmin 0 1.5735456200185736vmin rgb(119, 119, 119);
+      //box-shadow: -1vmin 0 3.8162095334108592vmin currentColor;
     }
     &:nth-child(4) {
-      background-size: cover;
-      background-image: url(../../../assets/icons/dockerp.png);
+      background: radial-gradient(circle at 50% 50%, #ffffff, #ffffff, #757575, #ffffff);
       color: $bubbleC1;
       top: 98%;
       left: 95%;
+      width: 7em;
+      height: 7em;
       animation-duration: 94s;
       animation-delay: -10s;
       transform-origin: -3vw -16vh;
-      box-shadow: -1vmin 0 3.7093442606860862vmin currentColor;
+      box-shadow: -1vmin 0 1.5735456200185736vmin rgb(119, 119, 119);
+      //box-shadow: -1vmin 0 3.7093442606860862vmin currentColor;
     }
     &:nth-child(5) {
-      background-size: cover;
-      background-image: url(../../../assets/icons/figmap.png);
+      background: radial-gradient(circle at 50% 50%, #ffffff, #ffffff, #757575, #ffffff);
       color: $bubbleC2;
       top: 50%;
-      left: 27%;
+      left: 15%;
+      width: 4em;
+      height: 4em;
       animation-duration: 69s;
       animation-delay: -87s;
       transform-origin: -12vw -18vh;
-      box-shadow: -1vmin 0 3.7503844338219796vmin currentColor;
+      box-shadow: -1vmin 0 1.5735456200185736vmin rgb(119, 119, 119);
+     //box-shadow: -1vmin 0 3.7503844338219796vmin currentColor;
     }
     &:nth-child(6) {
-      background-size: cover;
-      background-image: url(../../../assets/icons/github.png);
+      background: radial-gradient(circle at 50% 50%, #ffffff, #ffffff, #757575, #ffffff);
       color: $bubbleC3;
       top: 92%;
       left: 98%;
+      width: 2em;
+      height: 2em;
       animation-duration: 65s;
       animation-delay: -23s;
       transform-origin: -19vw -19vh;
-      box-shadow: -1vmin
+      box-shadow: -1vmin 0 1.5735456200185736vmin rgb(119, 119, 119);
     }
       &:nth-child(7) {
-        background-size: cover;
-      background-image: url(../../../assets/icons/canvap.png);
+        background: radial-gradient(circle at 50% 50%, #ffffff, #ffffff, #757575, #ffffff);
         color: $bubbleC2;
         top: 83%;
-        left: 82%;
+        left: 44%;
+        width: 8em;
+      height: 8em;
         animation-duration: 60s;
         animation-delay: -18s;
         transform-origin: -10vw -17vh;
-        box-shadow: -1vmin 0 3.8736531372812273vmin currentColor;
+        box-shadow: -1vmin 0 1.5735456200185736vmin rgb(119, 119, 119);
       }
       &:nth-child(8) {
-        background-size: cover;
-      background-image: url(../../../assets/icons/canvap.png);
+        background: radial-gradient(circle at 50% 50%, #ffffff, #ffffff, #757575, #ffffff);
         color: $bubbleC3;
         top: 71%;
         left: 5%;
         animation-duration: 74s;
         animation-delay: -9s;
         transform-origin: -20vw -17vh;
-        box-shadow: -1vmin 0 3.7447474605226967vmin currentColor;
+        box-shadow: -1vmin 0 1.5735456200185736vmin rgb(119, 119, 119);
       }
       &:nth-child(9) {
-        background-size: cover;
-      background-image: url(../../../assets/icons/canvap.png);
+        background: radial-gradient(circle at 50% 50%, #ffffff, #ffffff, #757575, #ffffff);
         color: $bubbleC1;
         top: 21%;
         left: 74%;
-        animation-duration: 30s;
+        animation-duration: 40s;
         animation-delay: -25s;
         transform-origin: -2vw -19vh;
-        box-shadow: -1vmin 0 3.893415994776306vmin currentColor;
+        box-shadow: -1vmin 0 1.5735456200185736vmin rgb(119, 119, 119);
       }
       &:nth-child(10) {
-        background-size: cover;
-      background-image: url(../../../assets/icons/canvap.png);
+        background: radial-gradient(circle at 50% 50%, #ffffff, #ffffff, #757575, #ffffff);
         color: $bubbleC1;
         top: 80%;
         left: 74%;
-        animation-duration: 30s;
+        animation-duration: 80s;
         animation-delay: -5s;
         transform-origin: -2vw -19vh;
-        box-shadow: -1vmin 0 3.893415994776306vmin currentColor;
+        box-shadow: -1vmin 0 1.5735456200185736vmin rgb(119, 119, 119);
       }
-      &:nth-child(11) {
-        background-size: cover;
-      background-image: url(../../../assets/icons/canvap.png);
-        color: $bubbleC1;
-        top: 5%;
-        left: 74%;
-        animation-duration: 30s;
-        animation-delay: -45s;
-        transform-origin: -2vw -19vh;
-        box-shadow: -1vmin 0 3.893415994776306vmin currentColor;
-      }
-      &:nth-child(12) {
-        background-size: cover;
-      background-image: url(../../../assets/icons/canvap.png);
-        color: $bubbleC1;
-        top: 71%;
-        left: 5%;
-        animation-duration: 30s;
-        animation-delay: -35s;
-        transform-origin: -2vw -19vh;
-        box-shadow: -1vmin 0 3.893415994776306vmin currentColor;
-      }
-      &:nth-child(13) {
-        background-size: cover;
-      background-image: url(../../../assets/icons/canvap.png);
-        color: $bubbleC1;
-        top: 5%;
-        left: 65%;
-        animation-duration: 30s;
-        animation-delay: -25s;
-        transform-origin: -2vw -19vh;
-        box-shadow: -1vmin 0 3.893415994776306vmin currentColor;
-      }
-
-
-      &:nth-child(14) {
-        background-size: cover;
-      background-image: url(../../../assets/icons/canvap.png);
-        color: $bubbleC3;
-        top: 2%;
-        left: 68%;
-        animation-duration: 84s;
-        animation-delay: -6s;
-        transform-origin: 2vw 3vh;
-        box-shadow: -1vmin 0 3.8162095334108592vmin currentColor;
-      }
-      &:nth-child(15) {
-        background-size: cover;
-      background-image: url(../../../assets/icons/canvap.png);
-        color: $bubbleC1;
-        top: 98%;
-        left: 95%;
-        animation-duration: 94s;
-        animation-delay: -10s;
-        transform-origin: -3vw -16vh;
-        box-shadow: -1vmin 0 3.7093442606860862vmin currentColor;
-      }
-      &:nth-child(16) {
-        background-size: cover;
-      background-image: url(../../../assets/icons/canvap.png);
-        color: $bubbleC2;
-        top: 50%;
-        left: 27%;
-        animation-duration: 69s;
-        animation-delay: -87s;
-        transform-origin: -12vw -18vh;
-        box-shadow: -1vmin 0 3.7503844338219796vmin currentColor;
-      }
-      &:nth-child(17) {
-        background-size: cover;
-      background-image: url(../../../assets/icons/canvap.png);
-        color: $bubbleC3;
-        top: 92%;
-        left: 98%;
-        animation-duration: 65s;
-        animation-delay: -23s;
-        transform-origin: -19vw -19vh;
-        box-shadow: -1vmin
-      }
-        &:nth-child(18) {
-          background-size: cover;
-      background-image: url(../../../assets/icons/canvap.png);
-          color: $bubbleC2;
-          top: 83%;
-          left: 82%;
-          animation-duration: 60s;
-          animation-delay: -18s;
-          transform-origin: -10vw -17vh;
-          box-shadow: -1vmin 0 3.8736531372812273vmin currentColor;
-        }
-        &:nth-child(19) {
-          background-size: cover;
-      background-image: url(../../../assets/icons/canvap.png);
-          color: $bubbleC3;
-          top: 71%;
-          left: 5%;
-          animation-duration: 74s;
-          animation-delay: -9s;
-          transform-origin: -20vw -17vh;
-          box-shadow: -1vmin 0 3.7447474605226967vmin currentColor;
-        }
-        &:nth-child(20) {
-          background-size: cover;
-      background-image: url(../../../assets/icons/canvap.png);
-          color: $bubbleC1;
-          top: 21%;
-          left: 74%;
-          animation-duration: 30s;
-          animation-delay: -25s;
-          transform-origin: -2vw -19vh;
-          box-shadow: -1vmin 0 3.893415994776306vmin currentColor;
-        }
-        &:nth-child(21) {
-          background-size: cover;
-      background-image: url(../../../assets/icons/canvap.png);
-          color: $bubbleC1;
-          top: 21%;
-          left: 74%;
-          animation-duration: 30s;
-          animation-delay: -25s;
-          transform-origin: -2vw -19vh;
-          box-shadow: -1vmin 0 3.893415994776306vmin currentColor;
-        }
     }
   }
   
