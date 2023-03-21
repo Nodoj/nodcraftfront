@@ -19,6 +19,14 @@ export const AnimatedBg = () => {
    <span></span>
    <span></span>
    <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
 </div>
 </>
   )
