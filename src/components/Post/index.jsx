@@ -8,6 +8,9 @@ import EditIcon from '@mui/icons-material/Edit';
 import EyeIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import CommentIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
 import styles from './Post.module.scss';
 import { UserInfo } from '../UserInfo';
 import { PostSkeleton } from './Skeleton';
@@ -28,6 +31,8 @@ export const Post = ({
   isEditable,
 }) => {
   const dispatch = useDispatch();
+  const [open, setOpen] = React.useState(false); // add state for lightbox
+
   if (isLoading) {
     return <PostSkeleton />;
   }
@@ -53,17 +58,23 @@ export const Post = ({
         </div>
       )}
       {imageUrl && (
+        // add onClick handler to open lightbox
         <img
           className={clsx(styles.image, { [styles.imageFull]: isFullPost })}
           src={imageUrl}
           alt={title}
+          onClick={() => setOpen(true)}
         />
       )}
       <div className={styles.wrapper}>
         {/* <UserInfo {...user} additionalText={createdAt} /> */}
         <div className={styles.indention}>
           <h2 className={clsx(styles.title, { [styles.titleFull]: isFullPost })}>
-            {isFullPost ? title : <Link to={`/posts/${id}`}>{title}</Link>}
+            {isFullPost ? (
+              title
+            ) : (
+              <Link to={`/posts/${id}`}>{title}</Link>
+            )}
           </h2>
           <ul className={styles.tags}>
             {tags.map((name) => (
@@ -85,6 +96,18 @@ export const Post = ({
           </ul>
         </div>
       </div>
+
+      {/* add lightbox component */}
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        slides={[
+          {
+            src: imageUrl,
+            alt: title,
+          },
+        ]}
+      />
     </div>
   );
 };

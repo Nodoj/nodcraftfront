@@ -1,7 +1,8 @@
 $bubbleC1: #06c6a9;
-$bubbleC2: #111111;
+$bubbleC2: #d200e6;
 $bubbleC3: #111111;
-$random-scale: random() * 0.4 + 0.8; // Random scale between 0.8 and 1.2
+$random-scale: random() * 0.4 + 95; // Random scale between 0.8 and 1.2
+$random-size: random() * 95 + 5; // Random scale between 5 and 100
 
 /* ------------ anim bg ----------------- */
 
@@ -21,9 +22,8 @@ $random-scale: random() * 0.4 + 0.8; // Random scale between 0.8 and 1.2
   z-index: -100;
 
   span {
-   
-    width: 4vmin;
-    height: 4vmin;
+    width: 5vmin;
+    height: 5vmin;
     border-radius: 12vmin * $random-scale;
     backface-visibility: hidden;
     position: absolute;
@@ -33,6 +33,8 @@ $random-scale: random() * 0.4 + 0.8; // Random scale between 0.8 and 1.2
     animation-iteration-count: infinite;
 
     &:nth-child(1) {
+      background-size: cover;
+      background-image: url(../../../assets/icons/angularp.png);
       color: $bubbleC1;
       top: 24%;
       left: 70%;
@@ -42,6 +44,8 @@ $random-scale: random() * 0.4 + 0.8; // Random scale between 0.8 and 1.2
       box-shadow: -1vmin 0 3.5735456200185736vmin currentColor;
     }
     &:nth-child(2) {
+      background-size: cover;
+      background-image: url(../../../assets/icons/awsp.png);
       color: $bubbleC2;
       top: 6%;
       left: 96%;
@@ -51,6 +55,8 @@ $random-scale: random() * 0.4 + 0.8; // Random scale between 0.8 and 1.2
       box-shadow: -1vmin 0 3.823172077493054vmin currentColor;
     }
     &:nth-child(3) {
+      background-size: cover;
+      background-image: url(../../../assets/icons/canvap.png);
       color: $bubbleC3;
       top: 2%;
       left: 68%;
@@ -60,6 +66,8 @@ $random-scale: random() * 0.4 + 0.8; // Random scale between 0.8 and 1.2
       box-shadow: -1vmin 0 3.8162095334108592vmin currentColor;
     }
     &:nth-child(4) {
+      background-size: cover;
+      background-image: url(../../../assets/icons/dockerp.png);
       color: $bubbleC1;
       top: 98%;
       left: 95%;
@@ -69,6 +77,8 @@ $random-scale: random() * 0.4 + 0.8; // Random scale between 0.8 and 1.2
       box-shadow: -1vmin 0 3.7093442606860862vmin currentColor;
     }
     &:nth-child(5) {
+      background-size: cover;
+      background-image: url(../../../assets/icons/figmap.png);
       color: $bubbleC2;
       top: 50%;
       left: 27%;
@@ -78,6 +88,8 @@ $random-scale: random() * 0.4 + 0.8; // Random scale between 0.8 and 1.2
       box-shadow: -1vmin 0 3.7503844338219796vmin currentColor;
     }
     &:nth-child(6) {
+      background-size: cover;
+      background-image: url(../../../assets/icons/github.png);
       color: $bubbleC3;
       top: 92%;
       left: 98%;
@@ -87,6 +99,8 @@ $random-scale: random() * 0.4 + 0.8; // Random scale between 0.8 and 1.2
       box-shadow: -1vmin
     }
       &:nth-child(7) {
+        background-size: cover;
+      background-image: url(../../../assets/icons/canvap.png);
         color: $bubbleC2;
         top: 83%;
         left: 82%;
@@ -96,6 +110,8 @@ $random-scale: random() * 0.4 + 0.8; // Random scale between 0.8 and 1.2
         box-shadow: -1vmin 0 3.8736531372812273vmin currentColor;
       }
       &:nth-child(8) {
+        background-size: cover;
+      background-image: url(../../../assets/icons/canvap.png);
         color: $bubbleC3;
         top: 71%;
         left: 5%;
@@ -105,6 +121,8 @@ $random-scale: random() * 0.4 + 0.8; // Random scale between 0.8 and 1.2
         box-shadow: -1vmin 0 3.7447474605226967vmin currentColor;
       }
       &:nth-child(9) {
+        background-size: cover;
+      background-image: url(../../../assets/icons/canvap.png);
         color: $bubbleC1;
         top: 21%;
         left: 74%;
@@ -114,41 +132,139 @@ $random-scale: random() * 0.4 + 0.8; // Random scale between 0.8 and 1.2
         box-shadow: -1vmin 0 3.893415994776306vmin currentColor;
       }
       &:nth-child(10) {
+        background-size: cover;
+      background-image: url(../../../assets/icons/canvap.png);
         color: $bubbleC1;
-        top: 21%;
+        top: 80%;
         left: 74%;
         animation-duration: 30s;
-        animation-delay: -25s;
+        animation-delay: -5s;
         transform-origin: -2vw -19vh;
         box-shadow: -1vmin 0 3.893415994776306vmin currentColor;
       }
       &:nth-child(11) {
+        background-size: cover;
+      background-image: url(../../../assets/icons/canvap.png);
         color: $bubbleC1;
-        top: 21%;
+        top: 5%;
         left: 74%;
         animation-duration: 30s;
-        animation-delay: -25s;
+        animation-delay: -45s;
         transform-origin: -2vw -19vh;
         box-shadow: -1vmin 0 3.893415994776306vmin currentColor;
       }
       &:nth-child(12) {
+        background-size: cover;
+      background-image: url(../../../assets/icons/canvap.png);
         color: $bubbleC1;
-        top: 21%;
-        left: 74%;
+        top: 71%;
+        left: 5%;
         animation-duration: 30s;
-        animation-delay: -25s;
+        animation-delay: -35s;
         transform-origin: -2vw -19vh;
         box-shadow: -1vmin 0 3.893415994776306vmin currentColor;
       }
       &:nth-child(13) {
+        background-size: cover;
+      background-image: url(../../../assets/icons/canvap.png);
         color: $bubbleC1;
-        top: 21%;
-        left: 74%;
+        top: 5%;
+        left: 65%;
         animation-duration: 30s;
         animation-delay: -25s;
         transform-origin: -2vw -19vh;
         box-shadow: -1vmin 0 3.893415994776306vmin currentColor;
       }
+
+
+      &:nth-child(14) {
+        background-size: cover;
+      background-image: url(../../../assets/icons/canvap.png);
+        color: $bubbleC3;
+        top: 2%;
+        left: 68%;
+        animation-duration: 84s;
+        animation-delay: -6s;
+        transform-origin: 2vw 3vh;
+        box-shadow: -1vmin 0 3.8162095334108592vmin currentColor;
+      }
+      &:nth-child(15) {
+        background-size: cover;
+      background-image: url(../../../assets/icons/canvap.png);
+        color: $bubbleC1;
+        top: 98%;
+        left: 95%;
+        animation-duration: 94s;
+        animation-delay: -10s;
+        transform-origin: -3vw -16vh;
+        box-shadow: -1vmin 0 3.7093442606860862vmin currentColor;
+      }
+      &:nth-child(16) {
+        background-size: cover;
+      background-image: url(../../../assets/icons/canvap.png);
+        color: $bubbleC2;
+        top: 50%;
+        left: 27%;
+        animation-duration: 69s;
+        animation-delay: -87s;
+        transform-origin: -12vw -18vh;
+        box-shadow: -1vmin 0 3.7503844338219796vmin currentColor;
+      }
+      &:nth-child(17) {
+        background-size: cover;
+      background-image: url(../../../assets/icons/canvap.png);
+        color: $bubbleC3;
+        top: 92%;
+        left: 98%;
+        animation-duration: 65s;
+        animation-delay: -23s;
+        transform-origin: -19vw -19vh;
+        box-shadow: -1vmin
+      }
+        &:nth-child(18) {
+          background-size: cover;
+      background-image: url(../../../assets/icons/canvap.png);
+          color: $bubbleC2;
+          top: 83%;
+          left: 82%;
+          animation-duration: 60s;
+          animation-delay: -18s;
+          transform-origin: -10vw -17vh;
+          box-shadow: -1vmin 0 3.8736531372812273vmin currentColor;
+        }
+        &:nth-child(19) {
+          background-size: cover;
+      background-image: url(../../../assets/icons/canvap.png);
+          color: $bubbleC3;
+          top: 71%;
+          left: 5%;
+          animation-duration: 74s;
+          animation-delay: -9s;
+          transform-origin: -20vw -17vh;
+          box-shadow: -1vmin 0 3.7447474605226967vmin currentColor;
+        }
+        &:nth-child(20) {
+          background-size: cover;
+      background-image: url(../../../assets/icons/canvap.png);
+          color: $bubbleC1;
+          top: 21%;
+          left: 74%;
+          animation-duration: 30s;
+          animation-delay: -25s;
+          transform-origin: -2vw -19vh;
+          box-shadow: -1vmin 0 3.893415994776306vmin currentColor;
+        }
+        &:nth-child(21) {
+          background-size: cover;
+      background-image: url(../../../assets/icons/canvap.png);
+          color: $bubbleC1;
+          top: 21%;
+          left: 74%;
+          animation-duration: 30s;
+          animation-delay: -25s;
+          transform-origin: -2vw -19vh;
+          box-shadow: -1vmin 0 3.893415994776306vmin currentColor;
+        }
     }
   }
   

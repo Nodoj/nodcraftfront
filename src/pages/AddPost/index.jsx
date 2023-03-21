@@ -19,7 +19,8 @@ export const AddPost = () => {
   const [text, setText] = React.useState('');
   const [title, setTitle] = React.useState('');
   const [tags, setTags] = React.useState('');
-  const [imageUrl, setImageUrl] = React.useState('');
+  const [imageUrl, setImageUrl] = React.useState('')
+  
   const inputFileRef = React.useRef(null);
 
   const isEditing = Boolean(id);
@@ -107,52 +108,53 @@ export const AddPost = () => {
   }
 
   return (
-    <Paper style={{ padding: 30 }}>
-      <Button onClick={() => inputFileRef.current.click()} variant="outlined" size="large">
-        Upload preview
-      </Button>
-      <input ref={inputFileRef} type="file" onChange={handleChangeFile} hidden />
-      {imageUrl && (
-        <>
-          <Button variant="contained" color="error" onClick={onClickRemoveImage}>
-            Delete
-          </Button>
-          <img
-            className={styles.image}
-            src={`${process.env.REACT_APP_API_URL}${imageUrl}`}
-            alt="Uploaded"
-          />
-        </>
-      )}
-      <br />
-      <br />
-      <TextField
-        // value={fields.title}
-        // onChange={(e) => setFieldValue('title', e.target.value)}
-        classes={{ root: styles.title }}
-        variant="standard"
-        placeholder="Article title..."
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        fullWidth
-      />
-      <TextField
-        value={tags}
-        onChange={(e) => setTags(e.target.value)}
-        classes={{ root: styles.tags }}
-        variant="standard"
-        placeholder="Tags"
-        fullWidth
-      />
-      <SimpleMDE className={styles.editor} value={text} onChange={onChange} options={options} />
-      <div className={styles.buttons}>
-        <Button onClick={onSubmit} size="large" variant="contained">
-          {isEditing ? 'Save' : 'Publish'}
+
+      <Paper className={styles.root} style={{ padding: 30 }}>
+        <Button onClick={() => inputFileRef.current.click()} variant="outlined" size="large">
+          Upload preview
         </Button>
-        <a href="/">
-          <Button size="large">Cancel</Button>
-        </a>
-      </div>
-    </Paper>
+        <input ref={inputFileRef} type="file" onChange={handleChangeFile} hidden />
+        {imageUrl && (
+          <>
+            <Button variant="contained" color="error" onClick={onClickRemoveImage}>
+              Delete
+            </Button>
+            <img
+              className={styles.image}
+              src={`${process.env.REACT_APP_API_URL}${imageUrl}`}
+              alt="Uploaded"
+            />
+          </>
+        )}
+        <br />
+        <br />
+        <TextField
+          // value={fields.title}
+          // onChange={(e) => setFieldValue('title', e.target.value)}
+          classes={{ root: styles.title }}
+          variant="standard"
+          placeholder="Article title..."
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          fullWidth
+        />
+        <TextField
+          value={tags}
+          onChange={(e) => setTags(e.target.value)}
+          classes={{ root: styles.tags }}
+          variant="standard"
+          placeholder="Tags"
+          fullWidth
+        />
+        <SimpleMDE className={styles.editor} value={text} onChange={onChange} options={options} />
+        <div className={styles.buttons}>
+          <Button onClick={onSubmit} size="large" variant="contained">
+            {isEditing ? 'Save' : 'Publish'}
+          </Button>
+          <a href="/">
+            <Button size="large">Cancel</Button>
+          </a>
+        </div>
+      </Paper>
   );
 };

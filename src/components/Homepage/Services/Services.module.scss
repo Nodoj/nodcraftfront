@@ -15,12 +15,14 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 20px;
     text-align: center;
+   
   }
 
   .__title {
     color: $main-color;
     font-size: 2rem;
     margin-bottom: 3rem;
+    
   }
 
 
@@ -42,17 +44,18 @@
   .service__card ul li{
     list-style: none;
     padding: 10px;
-    border: 1px solid $main-color;
     border-radius: 10px;
     margin-bottom: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.685);
+    box-shadow: 0px 0px 2px 0.5px $main-color;
     background-position-y: 0%;
-    transition: 0.5s all ease-in-out;
+    transition: 0.3s all ease-in-out;
     &:hover{
-      transform: translateX(-5px);
+      transform: scale(1.1);
       background-size: 100%;
       background-color: $main-color;
-      transition: 0.5s all ease-in-out;
+      transition: 0.3s all ease-in-out;
+      
       color: white;
       &:hover span{
         color: white;
@@ -69,6 +72,5 @@
   }
   
 }
-
 
 
