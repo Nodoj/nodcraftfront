@@ -1,40 +1,63 @@
 @import '../../index.scss';
 
 .root {
-  background-color: #050505;
+  background-color: $darkest;
   position: sticky;
   z-index: 100;
   width: 100%;
-  height: 80px;
+  height: 8vh;
   display: flex;
+  opacity: 1;
   align-items: center;
+  animation: slidedown 3s ease-in;
+  
 }
 
 .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
 
-  svg {
-    max-width: 80px;
-    max-height: 80px;
+
+  a {
+    display: flex;
+    align-items: center;
+ 
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $main-text-color;
+    font-weight: 1000;
+ 
+    img{
+      height: 3vh;
+      padding-right: 15px;
+    }
   }
-}
-
-.logo img{
-  max-width: 15em;
+  
 }
 
 .buttons {
   display: flex;
-    flex-direction: row;
-    align-items: center;
+  flex-direction: row;
+  align-items: center;
+
   button {
     margin-left: 10px;
-    
+    color: $main-text-color;
   }
 
   a {
     text-decoration: none;
   }
+}
+
+@keyframes slidedown {
+ from{
+  opacity: 0;
+ }
+ to{
+  opacity: 1;
+ }
+
 }

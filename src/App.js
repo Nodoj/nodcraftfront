@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
-import Container from "@mui/material/Container";
 
 
 import { Header } from "./components";
@@ -21,20 +20,18 @@ function App() {
     dispatch(fetchAuthMe());
   }, []);
 
-
   return (
     <>
 
       <Header />
-
       <Routes>
         <Route path="/" element={<Home />} />
-          <Route path="/posts/:id" element={<FullPost />} />
-          <Route path="/posts/:id/edit" element={<AddPost />} />
-          <Route path="/add-post" element={<AddPost />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Registration />} />
-        </Routes>
+        <Route path="/posts/:id" element={<FullPost />} />
+        <Route path="/posts/:id/edit" element={<AddPost />} />
+        <Route path="/add-post" element={<AddPost />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Registration />} />
+      </Routes>
 
 
     </>

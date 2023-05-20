@@ -6,13 +6,21 @@ import { useDispatch, useSelector } from 'react-redux';
 import styles from './Header.module.scss';
 import Container from '@mui/material/Container';
 import { logout, selectIsAuth } from '../../redux/slices/auth';
-import logo from './logo.png';
+import logo from './logog.png';
+
+
+
 
 export const Header = () => {
   const dispatch = useDispatch();
   const isAuth = useSelector(selectIsAuth);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+
+
+
+
+
 
   const onClickLogout = () => {
     if (window.confirm('Are you sure you want to logout?')) {
@@ -41,9 +49,37 @@ export const Header = () => {
       <Container maxWidth="lg">
         <div className={styles.inner}>
           <Link className={styles.logo} to="/">
-            <img src={logo} alt="Logo" />
+            <img classname={styles.logos} src={logo} alt='logo' />
+            <h1>NJ Porfolio</h1>
           </Link>
           <div className={styles.buttons}>
+            <>
+              <Link to="#home">
+                <Button variant="outlined">Home</Button>
+              </Link>
+              <Link to="#aboutme">
+                <Button variant="outlined">Stats</Button>
+              </Link>
+              <Link to="#aboutme">
+                <Button variant="outlined">About me</Button>
+              </Link>
+              <Link to="#aboutme">
+                <Button variant="outlined">Experience</Button>
+              </Link>
+              <Link to="#aboutme">
+                <Button variant="outlined">Project</Button>
+              </Link>
+              <Link to="#aboutme">
+                <Button variant="outlined">Skills</Button>
+              </Link>
+            </>
+          </div>
+          <div className={styles.buttons}>
+            <Link to="#hire">
+              <Button variant="outlined">Hire Me</Button>
+            </Link>
+          </div>
+          {/* <div className={styles.buttons}>
             {isAuth ? (
               <>
                 <Link to="/add-post">
@@ -55,7 +91,7 @@ export const Header = () => {
               </>
             ) : (
               <>
-                <Link to="/login">
+                <Link to="./login">
                   <Button variant="outlined">Login</Button>
                 </Link>
                 <Link to="/register">
@@ -63,7 +99,7 @@ export const Header = () => {
                 </Link>
               </>
             )}
-          </div>
+          </div> */}
         </div>
       </Container>
     </div>

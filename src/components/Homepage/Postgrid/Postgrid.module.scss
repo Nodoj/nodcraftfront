@@ -1,13 +1,13 @@
 @import '../../../index.scss';
 
 .root{
-    max-width: 100%;
-    background-image: url(../../../assets/images/projectbg.jpg);
-    background-size: cover;
+  background-color: red;
+  margin-top: 50px; 
+  background: url(../../../assets/images/projectbg.jpg);
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin-top: 50px; 
-
+    background-size: cover;
 
     h1{
         text-align: center;;

@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@0,400;0,500;1,500&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Roboto';
+  font-family: 'Ysabeau', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fbfbfb!important;
+  background-color: #eeedf5 !important;
 }
 
 
@@ -12,25 +14,41 @@ body {
   margin: 0 auto;
 }
 
-$main-color: #7F00FF;
-$main-text-color: #fff;
-$ascent-text-color: #161616;
+$main-color: #150d30;
+$main-content: #150d30;
+$main-text-color: #c4b4fa;
+$ascent-purple: #c594ff;
+$ascent-cyan: #00dcc5; 
+$darkest: #121212;
+$hover: #19171c;
+$focus: #26202e;
 $container: 1200px;
 
-$bubbleC1: #7F00FF;
-$bubbleC2: #d200e6;
-$bubbleC3: #111111;
 
 $light-theme-color: #fff;
 $dark-theme-color: #333;
 
-
-.light-theme {
-  background-color: $light-theme-color;
-  color: #333;
+:root {
+  --color-primary: #fff;
+  --color-text: #333;
 }
 
-.dark-theme {
-  background-color: $dark-theme-color;
-  color: #fff;
+.theme-switch {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  &.dark {
+    --color-primary: #333;
+    --color-text: #fff;
+  }
+
+  &.light {
+    --color-primary: #fff;
+    --color-text: #333;
+  }
 }

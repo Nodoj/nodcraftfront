@@ -1,0 +1,29 @@
+@import '../../../index.scss';
+
+
+
+.root {
+    padding: 40px 0;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    .about {
+        max-width: $container;
+        margin: 0px auto 20px auto;
+        padding: 40px;
+    }
+    .aboutWrapper {
+        background-color: #4F4557;
+        padding: 40px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        & p{
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }  
+
+}
+

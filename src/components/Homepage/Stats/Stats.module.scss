@@ -1,0 +1,43 @@
+@import '../../../index.scss';
+
+
+
+.root {
+  background-color: $main-text-color;
+  background-image: url(../../../assets/topography.svg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  
+  background-size: 500px 500px;
+  padding: 40px 0;
+  text-align: center;
+  color: #fff;
+
+  span{
+    font-size: 1.2em;
+    color: #fff;
+  }
+
+  .about {
+    max-width: $container;
+    margin: 0px auto 20px auto;
+    border-radius: 16px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .statusWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@keyframes movebg {
+  0%{
+    
+  }
+}

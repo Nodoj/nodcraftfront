@@ -1,0 +1,75 @@
+{
+    "jobs": [
+      {
+        "id": 1,
+        "company": "Acme Inc.",
+        "position": "Software Developer",
+        "startDate": "May 2018",
+        "endDate": "Present",
+        "responsibilities": [
+          "Develop and maintain web applications using React and Node.js",
+          "Collaborate with team members on projects and code reviews",
+          "Implement responsive design and accessibility standards",
+          "Debug and troubleshoot issues as they arise",
+          "Participate in Agile development process"
+        ]
+      },
+      {
+        "id": 2,
+        "company": "Beta Corp.",
+        "position": "Front-end Developer",
+        "startDate": "June 2016",
+        "endDate": "April 2018",
+        "responsibilities": [
+          "Developed user interfaces for web applications using HTML, CSS, and JavaScript",
+          "Worked closely with back-end developers to integrate front-end code with server-side functionality",
+          "Implemented responsive design and cross-browser compatibility",
+          "Assisted in requirements gathering and project scoping",
+          "Participated in code reviews and team meetings"
+        ]
+      },
+      {
+        "id": 3,
+        "company": "Gamma LLC",
+        "position": "Full-stack Developer",
+        "startDate": "January 2015",
+        "endDate": "May 2016",
+        "responsibilities": [
+          "Developed and maintained web applications using Ruby on Rails and React",
+          "Collaborated with team members on project planning and implementation",
+          "Implemented responsive design and accessibility standards",
+          "Troubleshot and debugged issues as they arose",
+          "Participated in Agile development process"
+        ]
+      },
+      {
+        "id": 4,
+        "company": "Delta Co.",
+        "position": "Web Developer",
+        "startDate": "July 2013",
+        "endDate": "December 2014",
+        "responsibilities": [
+          "Developed and maintained websites using HTML, CSS, and JavaScript",
+          "Assisted in project planning and scoping",
+          "Implemented responsive design and cross-browser compatibility",
+          "Collaborated with team members on design and content",
+          "Managed version control using Git"
+        ]
+      },
+      {
+        "id": 5,
+        "company": "Epsilon Ltd.",
+        "position": "Junior Developer",
+        "startDate": "June 2012",
+        "endDate": "June 2013",
+        "responsibilities": [
+          "Assisted in development of web applications using HTML, CSS, and JavaScript",
+          "Performed code reviews and testing",
+          "Assisted in troubleshooting and debugging issues",
+          "Participated in team meetings and planning sessions",
+          "Learned and applied new technologies and programming languages"
+        ]
+      }
+    ]
+  }
+  

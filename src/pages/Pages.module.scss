@@ -1,0 +1,77 @@
+
+
+
+
+.animation, .animation_layer {
+	height: 100%;
+  
+}
+
+.animation {
+  display: block;
+	position: relative;
+	z-index: 10;
+}
+
+.animation_layer {
+	background-position: bottom center;
+	background-size: cover;
+	background-repeat: repeat-x;
+	width: 100%;
+	position: absolute;
+    height: 100vh;
+  
+}
+.animation_layer.parallax {
+	position: fixed;
+    
+
+}
+
+#parBg {
+  background-image: url(../assets/images/parabg.png);
+
+}
+
+#parSix {
+  background-image: url(../assets/images/para6.png);
+ 
+}
+
+#parFive {
+  background-image: url(../assets/images/para5.png);
+
+}
+
+#parFour {
+  background-image: url(../assets/images/para4.png);
+
+}
+
+#parThree {
+  background-image: url(../assets/images/para3.png);
+  
+}
+
+#parTwo {
+  background-image: url(../assets/images/para2.png);
+ 
+}
+
+#parOne {
+  background-image: url(../assets/images/para1.png);
+  
+ 
+}
+
+
+#parText{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#parHero{
+  background-color: #fff;
+  z-index: 15;
+}
